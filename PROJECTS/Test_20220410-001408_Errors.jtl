@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1505" it="0" lt="1505" ct="967" ts="1649513648447" s="false" lb="01_CreatePets" rc="200" rm="OK" tn="CreatePets 1-1" dt="text" de="" by="494" sby="442" sc="1" ec="1" ng="4" na="4" hn="HDNBNDC101115">
+  <assertionResult>
+    <name>ResponseTimeAssertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>The operation lasted too long: It took 1,505 milliseconds, but should not have lasted longer than 300 milliseconds.</failureMessage>
+  </assertionResult>
+  <assertionResult>
+    <name>SuccessResponseAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Date: Sat, 09 Apr 2022 14:14:09 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+Transfer-Encoding: chunked
+Content-Type: application/json
+Connection: keep-alive
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+accept: application/json
+Content-Type: application/json
+Content-Length: 233
+Host: petstore.swagger.io
+User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+</requestHeader>
+  <responseData class="java.lang.String">{&quot;id&quot;:9223372000001128882,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Charlie&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">PUT</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;id&quot;: 0,&#xd;
+  &quot;category&quot;: {&#xd;
+    &quot;id&quot;: 0,&#xd;
+    &quot;name&quot;: &quot;string&quot;&#xd;
+  },&#xd;
+  &quot;name&quot;: &quot;Charlie&quot;,&#xd;
+  &quot;photoUrls&quot;: [&#xd;
+    &quot;string&quot;&#xd;
+  ],&#xd;
+  &quot;tags&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: 0,&#xd;
+      &quot;name&quot;: &quot;string&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;status&quot;: &quot;available&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://petstore.swagger.io/v2/pet</java.net.URL>
+</httpSample>
+<httpSample t="530" it="0" lt="0" ct="405" ts="1649513649428" s="false" lb="01_CreatePets" rc="Non HTTP response code: javax.net.ssl.SSLException" rm="Non HTTP response message: Socket closed" tn="CreatePets 1-3" dt="text" de="" by="3425" sby="0" sc="1" ec="1" ng="3" na="3" hn="HDNBNDC101115">
+  <assertionResult>
+    <name>ResponseTimeAssertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>The operation lasted too long: It took 530 milliseconds, but should not have lasted longer than 300 milliseconds.</failureMessage>
+  </assertionResult>
+  <assertionResult>
+    <name>SuccessResponseAssertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Failed to create new Pet</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+accept: application/json
+Content-Type: application/json
+Content-Length: 230
+Host: petstore.swagger.io
+User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+</requestHeader>
+  <responseData class="java.lang.String">javax.net.ssl.SSLException: Socket closed&#xd;
+	at sun.security.ssl.Alert.createSSLException(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.handleException(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.access$400(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(Unknown Source)&#xd;
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)&#xd;
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)&#xd;
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)&#xd;
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)&#xd;
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)&#xd;
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)&#xd;
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)&#xd;
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:935)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:646)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1296)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1285)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:558)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256)&#xd;
+	at java.lang.Thread.run(Unknown Source)&#xd;
+Caused by: java.net.SocketException: Socket closed&#xd;
+	at java.net.SocketInputStream.socketRead0(Native Method)&#xd;
+	at java.net.SocketInputStream.socketRead(Unknown Source)&#xd;
+	at java.net.SocketInputStream.read(Unknown Source)&#xd;
+	at java.net.SocketInputStream.read(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.read(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.access$300(Unknown Source)&#xd;
+	... 27 more&#xd;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">PUT</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;id&quot;: 0,&#xd;
+  &quot;category&quot;: {&#xd;
+    &quot;id&quot;: 0,&#xd;
+    &quot;name&quot;: &quot;string&quot;&#xd;
+  },&#xd;
+  &quot;name&quot;: &quot;Milo&quot;,&#xd;
+  &quot;photoUrls&quot;: [&#xd;
+    &quot;string&quot;&#xd;
+  ],&#xd;
+  &quot;tags&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: 0,&#xd;
+      &quot;name&quot;: &quot;string&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;status&quot;: &quot;available&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://petstore.swagger.io/v2/pet</java.net.URL>
+</httpSample>
+<httpSample t="35" it="0" lt="0" ct="34" ts="1649513649926" s="false" lb="01_CreatePets" rc="Non HTTP response code: javax.net.ssl.SSLException" rm="Non HTTP response message: Socket closed" tn="CreatePets 1-4" dt="text" de="" by="3509" sby="0" sc="1" ec="1" ng="3" na="3" hn="HDNBNDC101115">
+  <assertionResult>
+    <name>ResponseTimeAssertion</name>
+    <failure>false</failure>
+    <error>false</error>
+  </assertionResult>
+  <assertionResult>
+    <name>SuccessResponseAssertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Failed to create new Pet</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+accept: application/json
+Content-Type: application/json
+Content-Length: 232
+Host: petstore.swagger.io
+User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+</requestHeader>
+  <responseData class="java.lang.String">javax.net.ssl.SSLException: Socket closed&#xd;
+	at sun.security.ssl.Alert.createSSLException(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.SSLTransport.decode(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.decode(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.readHandshakeRecord(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)&#xd;
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436)&#xd;
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.hc.LazyLayeredConnectionSocketFactory.connectSocket(LazyLayeredConnectionSocketFactory.java:91)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:404)&#xd;
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:935)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:646)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1296)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1285)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:558)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256)&#xd;
+	at java.lang.Thread.run(Unknown Source)&#xd;
+	Suppressed: java.net.SocketException: Socket closed&#xd;
+		at java.net.SocketOutputStream.socketWrite(Unknown Source)&#xd;
+		at java.net.SocketOutputStream.write(Unknown Source)&#xd;
+		at sun.security.ssl.SSLSocketOutputRecord.encodeAlert(Unknown Source)&#xd;
+		... 31 more&#xd;
+Caused by: java.net.SocketException: Socket closed&#xd;
+	at java.net.SocketInputStream.socketRead0(Native Method)&#xd;
+	at java.net.SocketInputStream.socketRead(Unknown Source)&#xd;
+	at java.net.SocketInputStream.read(Unknown Source)&#xd;
+	at java.net.SocketInputStream.read(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.read(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.decode(Unknown Source)&#xd;
+	... 28 more&#xd;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">PUT</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;id&quot;: 0,&#xd;
+  &quot;category&quot;: {&#xd;
+    &quot;id&quot;: 0,&#xd;
+    &quot;name&quot;: &quot;string&quot;&#xd;
+  },&#xd;
+  &quot;name&quot;: &quot;Archie&quot;,&#xd;
+  &quot;photoUrls&quot;: [&#xd;
+    &quot;string&quot;&#xd;
+  ],&#xd;
+  &quot;tags&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: 0,&#xd;
+      &quot;name&quot;: &quot;string&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;status&quot;: &quot;available&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://petstore.swagger.io/v2/pet</java.net.URL>
+</httpSample>
+<httpSample t="1044" it="0" lt="0" ct="622" ts="1649513648927" s="false" lb="01_CreatePets" rc="Non HTTP response code: javax.net.ssl.SSLException" rm="Non HTTP response message: Socket closed" tn="CreatePets 1-2" dt="text" de="" by="3425" sby="0" sc="1" ec="1" ng="1" na="1" hn="HDNBNDC101115">
+  <assertionResult>
+    <name>ResponseTimeAssertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>The operation lasted too long: It took 1,044 milliseconds, but should not have lasted longer than 300 milliseconds.</failureMessage>
+  </assertionResult>
+  <assertionResult>
+    <name>SuccessResponseAssertion</name>
+    <failure>true</failure>
+    <error>false</error>
+    <failureMessage>Failed to create new Pet</failureMessage>
+  </assertionResult>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String">Connection: keep-alive
+accept: application/json
+Content-Type: application/json
+Content-Length: 229
+Host: petstore.swagger.io
+User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_261)
+</requestHeader>
+  <responseData class="java.lang.String">javax.net.ssl.SSLException: Socket closed&#xd;
+	at sun.security.ssl.Alert.createSSLException(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.TransportContext.fatal(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.handleException(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.access$400(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(Unknown Source)&#xd;
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)&#xd;
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)&#xd;
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)&#xd;
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)&#xd;
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)&#xd;
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)&#xd;
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)&#xd;
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)&#xd;
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)&#xd;
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)&#xd;
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)&#xd;
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)&#xd;
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)&#xd;
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)&#xd;
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:935)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:646)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1296)&#xd;
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1285)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:558)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489)&#xd;
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256)&#xd;
+	at java.lang.Thread.run(Unknown Source)&#xd;
+Caused by: java.net.SocketException: Socket closed&#xd;
+	at java.net.SocketInputStream.socketRead0(Native Method)&#xd;
+	at java.net.SocketInputStream.socketRead(Unknown Source)&#xd;
+	at java.net.SocketInputStream.read(Unknown Source)&#xd;
+	at java.net.SocketInputStream.read(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.read(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(Unknown Source)&#xd;
+	at sun.security.ssl.SSLSocketImpl.access$300(Unknown Source)&#xd;
+	... 27 more&#xd;
+</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">PUT</method>
+  <queryString class="java.lang.String">{&#xd;
+  &quot;id&quot;: 0,&#xd;
+  &quot;category&quot;: {&#xd;
+    &quot;id&quot;: 0,&#xd;
+    &quot;name&quot;: &quot;string&quot;&#xd;
+  },&#xd;
+  &quot;name&quot;: &quot;Max&quot;,&#xd;
+  &quot;photoUrls&quot;: [&#xd;
+    &quot;string&quot;&#xd;
+  ],&#xd;
+  &quot;tags&quot;: [&#xd;
+    {&#xd;
+      &quot;id&quot;: 0,&#xd;
+      &quot;name&quot;: &quot;string&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;status&quot;: &quot;available&quot;&#xd;
+}</queryString>
+  <java.net.URL>https://petstore.swagger.io/v2/pet</java.net.URL>
+</httpSample>
+
+</testResults>
